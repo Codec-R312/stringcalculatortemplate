@@ -1,46 +1,15 @@
-//Return 0 if string is empty
-console.log("\nReturn 0 if string is empty: ");
-add1(1);
-add1(0);
-add1("");
 
-console.log("\nReturn 1 if string is not empty: ");
-add2(1);
-add2(0);
-add2("");
 
 console.log("\nReturn sum: ");
 sun("1,2");
 sun("67,20");
 
-function add1(numbers){
+console.log("\n ");
 
-    let emptyString = "";
-    let result;
+let total = sun("1,1"); 
+let we =  sun("6,20");
 
-    if (numbers === emptyString) {
-        result = 0;
-    }
-    else{
-        result = "Not a string";
-    }
-    console.log(result);
-}
-
-function add2(numbers){
-
-    let emptyString = "";
-    let result;
-
-    if (numbers != emptyString) {
-        result = 1;
-    }
-    else{
-        result = "The string is empty";
-    }
-    console.log(result);
-}
-
+console.log(total + we);
 
 //The function for the two string numbers
 function sun(numbers){
@@ -56,4 +25,6 @@ function sun(numbers){
         result = 0;
     }
     console.log(result);
+
+    return result;
 }
