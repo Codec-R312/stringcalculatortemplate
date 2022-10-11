@@ -1,36 +1,48 @@
 
-//Sum of two string numbers
-console.log("\nReturn sum: ");
-console.log(sum("1,2"));
-console.log(sum("67,20"));
+// //Sum of two string numbers
+// console.log("\nReturn sum: ");
+// console.log(sum("1,2"));
+// console.log(sum("67,20"));
 
-console.log("\nReturn sum: ");
-console.log(sum2("1,2"));
-console.log(sum2("67,20"));
+// console.log("\nReturn sum: ");
+// console.log(sum2("1,2"));
+// console.log(sum2("67,20"));
 
-//total calculation using two sum 
-let total = sum("1,1"); 
-let we =  sum("6,20");
+// //total calculation using two sum 
+// let total = sum("1,1"); 
+// let we =  sum("6,20");
 
-console.log(total + we);
+// console.log(total + we);
 
-
-function add1(numbers){
-
+function add(numbers) {
     let emptyString = "";
-    let result;
 
     if (numbers === emptyString) {
         result = 0;
     }
     else{
-        result = "Not a string";
+        result = "The string is not empty";
+    }
+
+    return result
+}
+
+function addOne(numbers){
+
+    let emptyString = "";
+    let result;
+
+    if (numbers != emptyString) {
+        result = parseInt(numbers);
+    }
+    else{
+        result = "The string is empty";
     }
     
     return result;
 }
 
-function add2(numbers){
+function addTwo(numbers){
 
     let emptyString = "";
     let result;
@@ -80,15 +92,95 @@ function sum2(numbers){
     return result;
 }
 
-function addUnknownNumbers(){
+//console.log(addUnknownNumbers("1,2,34,1000,-7"));
 
+function addUnknownNumbers(numbers){
+    let total = 0;
+    let numArray = numbers.split(",");
+   
+    for (let i = 0; i < numArray.length; i++){
+        total+= parseInt(numArray[i]);
+    }
 
+    return total;
+}
+//console.log(addNewLineNumbers("1\n2\n34\n1000\n-7"));
 
-    return 0;
+function addNewLineNumbers(numbers){
+    let total = 0;
+    let numArray = numbers.split("\n");
+   
+    for (let i = 0; i < numArray.length; i++){
+        total+= parseInt(numArray[i]);
+    }
+
+    return total;
 }
 
-function addNewLineNumbers(){
+//console.log(addWithMultipleDelimiters("1\n2,3"));
+//console.log(addWithMultipleDelimiters("1\n2,3"));
 
+function addWithMultipleDelimiters(numbers) {
+    
+    let total = 0;
+    let numArray = numbers.split(/;,\n\\/);
+   
+    for (let i = 0; i < numArray.length; i++){
+        total+= parseInt(numArray[i]);
+    }
 
-    return 0;
+    return total;
 }
+
+//////////////////////////////////////////////////////////////////////////////
+// An example to remove 
+const nums = [1, 2, 3, 4, 5, 6];
+const remove = [1, 0, 4, 6];
+
+function removeFromArray(original, remove) {
+  return original.filter(value => !remove.includes(value));
+}
+
+//console.log(removeFromArray(nums,remove));
+
+/////////////////////////////////////////////////////////////////////////////////
+// let myinputarr = [];
+// let size = 5; // Array size
+const prompt=require("prompt-sync")({sigint:true});
+ 
+// for(let a=0; a <= size; a++) 
+// {
+   
+//     if (a === "q" || a === null) {
+//         break;
+//       }
+//       myinputarr[a] = prompt('Enter array Element ');
+// }
+ 
+// //user eneter array
+// console.log(myinputarr);
+
+
+/*
+for (let i = 0; i <= arr.length; i++) {
+  console.log(arr[i]);
+} */
+
+// let myArray = [];
+
+// while(true)
+// {
+//     for( let a = 0; a <= 5; a++)
+//     {
+
+   
+//     if( a === "q" || a ===null)
+//     {
+//         break;
+//     }
+
+//     myArray[a] = prompt('Enter array Element' + "" );
+// }
+
+// console.log(myinputarr);
+// }
